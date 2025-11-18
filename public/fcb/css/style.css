@@ -1,0 +1,94 @@
+/* FCB Sports Agency - Global Styles */
+:root{
+  --navy:#0A192F;
+  --gold:#FFB700;
+  --text:#F8F9FA;
+  --muted:#AEB4BE;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  background:var(--navy);
+  color:var(--text);
+  font-family:'Lato',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;
+  line-height:1.6;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family:'Poppins', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
+  font-weight:700;
+  color:var(--text);
+}
+
+a{color:var(--text); text-decoration:none}
+a:hover{color:var(--gold)}
+
+.btn-gold{background:var(--gold); color:#0A0A0A; border:none}
+.btn-gold:hover{background:#e6a500; color:#0A0A0A}
+.btn-outline-gold{border-color:var(--gold); color:var(--gold)}
+.btn-outline-gold:hover{background:var(--gold); color:#0A0A0A}
+
+.navbar-brand span{color:var(--gold)}
+.navbar{background:rgba(10,25,47,0.75)!important; backdrop-filter: blur(8px)}
+.nav-link{color:var(--text)!important}
+.nav-link.active, .nav-link:hover{color:var(--gold)!important}
+
+.hero{
+  position:relative;
+  min-height:78vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.hero-overlay{
+  position:absolute; inset:0; background:radial-gradient(80% 80% at 50% 50%, rgba(10,25,47,0.25) 0%, rgba(10,25,47,0.85) 60%, rgba(10,25,47,0.95) 100%);
+  pointer-events:none;
+}
+.hero-content{position:relative; z-index:2; text-align:center}
+.hero h1{font-size: clamp(2rem, 4vw, 3.5rem)}
+.hero p.lead{color:var(--muted)}
+
+.section-title{font-size:clamp(1.5rem,3vw,2.25rem)}
+.section-sub{color:var(--muted)}
+
+.card-dark{
+  background:#0E203D; border:1px solid rgba(255,255,255,0.08); border-radius:14px;
+}
+.card-dark .title{color:var(--text)}
+.card-dark .muted{color:var(--muted)}
+
+.icon-circle{
+  width:52px; height:52px; border-radius:50%; display:grid; place-items:center; background:rgba(255,183,0,0.12); color:var(--gold); border:1px solid rgba(255,183,0,0.35)
+}
+
+.footer{
+  background:#081224;
+  border-top:1px solid rgba(255,255,255,0.06)
+}
+.footer a{color:var(--muted)}
+.footer a:hover{color:var(--gold)}
+.footer .credit{color:#7B8496}
+
+/* Splide adjustments for dark theme */
+.splide__arrow{background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1)}
+.splide__arrow:hover{background:rgba(255,255,255,0.12)}
+.splide__pagination__page{background:#55637a}
+.splide__pagination__page.is-active{background:var(--gold)}
+
+/* Isotope grid */
+.grid{margin-top:1rem}
+.grid-item{width:280px}
+@media (max-width: 992px){.grid-item{width:45%}}
+@media (max-width: 576px){.grid-item{width:100%}}
+
+.badge-role{background:rgba(255,183,0,0.15); color:var(--gold); border:1px solid rgba(255,183,0,0.35)}
+
+/* Spline container */
+.spline-wrap{position:absolute; inset:0}
+.spline-wrap spline-viewer{display:block; width:100%; height:100%}
+
+/* Utilities */
+.hr-soft{border-color:rgba(255,255,255,0.1)}
+.shadow-soft{box-shadow: 0 10px 30px rgba(0,0,0,0.35)}
